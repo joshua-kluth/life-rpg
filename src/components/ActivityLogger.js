@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { CATEGORIES, ACTIVITY_TEMPLATES } from '../data/gameData';
-import './ActivityLogger.css';
+import '../styles/components/ActivityLogger.css';
 
 const ActivityLogger = ({ onAddActivity }) => {
   const [selectedCategory, setSelectedCategory] = useState('Exercise');

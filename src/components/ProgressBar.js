@@ -1,7 +1,7 @@
 // ProgressBar.js - Reusable progress bar component
 
 import React from 'react';
-import './ProgressBar.css';
+import '../styles/components/ProgressBar.css';
 
 const ProgressBar = ({ 
   progress, 

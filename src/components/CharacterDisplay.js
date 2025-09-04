@@ -1,7 +1,7 @@
 // CharacterDisplay.js - Display character avatar based on highest stat
 
 import React from 'react';
-import './CharacterDisplay.css';
+import '../styles/components/CharacterDisplay.css';
 
 const CharacterDisplay = ({ highestStat, overallLevel }) => {
   // Avatar mapping - for now using text descriptions

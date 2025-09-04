@@ -1,7 +1,7 @@
 // RecentActivities.js - Display recent activity history
 
 import React, { useState } from 'react';
-import './RecentActivities.css';
+import '../styles/components/RecentActivities.css';
 
 const RecentActivities = ({ activities }) => {
   const [showAll, setShowAll] = useState(false);

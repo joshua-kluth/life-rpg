@@ -3,7 +3,7 @@
 import React from 'react';
 import ProgressBar from './ProgressBar';
 import { getLevelProgress } from '../data/levelCalculations';
-import './StatsDisplay.css';
+import '../styles/components/StatsDisplay.css';
 
 const StatsDisplay = ({ stats }) => {
   // Category icons and colors

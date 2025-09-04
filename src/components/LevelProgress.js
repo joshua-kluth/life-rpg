@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { getXPForNextLevel, getLevelProgress } from '../data/levelCalculations';
-import './LevelProgress.css';
+import '../styles/components/LevelProgress.css';
 
 const LevelProgress = ({ totalXP, overallLevel }) => {
   const xpForNext = getXPForNextLevel(totalXP);
