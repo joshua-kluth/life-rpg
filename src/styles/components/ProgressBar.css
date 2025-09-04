@@ -1,0 +1,74 @@
+/* ProgressBar.css - Progress bar styling */
+
+.progress-bar-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.progress-bar-track {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ecf0f1;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  transition: width 0.8s ease;
+  background-color: #3498db;
+  overflow: hidden;
+}
+
+.progress-bar-fill.animated {
+  background: linear-gradient(90deg, 
+    var(--progress-color, #3498db) 0%, 
+    var(--progress-color, #3498db) 100%);
+  animation: slideIn 0.8s ease;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--final-width, 0%);
+  }
+}
+
+.progress-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.progress-label {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #3498db;
+}

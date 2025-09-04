@@ -1,0 +1,240 @@
+/* ActivityLogger.css - Activity logger styling */
+
+.activity-logger {
+  width: 100%;
+}
+
+.activity-form {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #e1e8ed;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+/* Category Tabs */
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-tab {
+  padding: 8px 16px;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  background: transparent;
+  color: #3498db;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.category-tab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.category-tab.active {
+  background: #3498db;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+  display: flex;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 4px;
+  border: 2px solid #e1e8ed;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #666;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Form Inputs */
+.activity-select,
+.activity-input,
+.xp-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.activity-select:focus,
+.activity-input:focus,
+.xp-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.activity-select {
+  cursor: pointer;
+}
+
+.xp-input {
+  max-width: 150px;
+}
+
+.xp-hint {
+  display: block;
+  color: #888;
+  font-size: 0.8em;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 15px 30px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+  filter: brightness(1.1);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+}
+
+/* XP Reference */
+.xp-reference {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.xp-reference h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+}
+
+.xp-examples {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.xp-example {
+  background: rgba(255,255,255,0.2);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: bold;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Success Notification */
+.activity-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #2ecc71;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  animation: slideInNotification 0.5s ease, fadeOutNotification 0.5s ease 2.5s forwards;
+}
+
+@keyframes slideInNotification {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutNotification {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .category-tabs {
+    justify-content: center;
+  }
+  
+  .category-tab {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+  
+  .toggle-buttons {
+    flex-direction: column;
+  }
+  
+  .xp-examples {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .activity-notification {
+    left: 20px;
+    right: 20px;
+    text-align: center;
+  }
+}
