@@ -1,0 +1,155 @@
+/* LevelProgress.css - Level progress styling */
+
+.level-progress {
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.level-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.level-header h3 {
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.current-level {
+  background-color: rgba(255,255,255,0.2);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.xp-display {
+  margin-bottom: 20px;
+}
+
+.xp-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.xp-number {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.xp-label {
+  font-size: 0.9em;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.progress-bar-container {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: 6px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+}
+
+.progress-text {
+  font-size: 0.9em;
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+.next-level-info {
+  margin-bottom: 20px;
+}
+
+.next-level-text {
+  background-color: rgba(255,255,255,0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.max-level-message {
+  margin-bottom: 20px;
+}
+
+.max-level-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: rgba(255,215,0,0.2);
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 2px solid rgba(255,215,0,0.5);
+  display: inline-block;
+}
+
+.level-milestones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.milestone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+.milestone-icon {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.milestone-text {
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .level-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .xp-number {
+    font-size: 1.8em;
+  }
+  
+  .level-milestones {
+    gap: 10px;
+  }
+  
+  .milestone {
+    font-size: 0.7em;
+  }
+}
